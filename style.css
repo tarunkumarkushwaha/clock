@@ -5,11 +5,23 @@ html, body {
   background-image: url(https://images.unsplash.com/photo-1668531501900-58e9ecf10fb5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
   background-blend-mode: overlay;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .paint {
-  background: #ffff94;
+background-color: #ffd6d6 ;
   font-size: 100px;
   opacity: 0.5;
+  text-align: center;
+}
+button{
+  background-color: #ffd6d6 ;
+  opacity: 0.5;
+  text-decoration-color: #500707;
+  font-size: 20px;
+  height: 70px;
+  width: 100px;
+  font-family: 'Kanit', sans-serif;
 }
