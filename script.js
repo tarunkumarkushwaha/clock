@@ -1,4 +1,4 @@
-var clock = document.getElementById('ghari');
+let clock = document.getElementById('ghari');
 const myclock = () => {
   let t = new Date();
   let h = (12 - (t.getHours()));
@@ -21,12 +21,11 @@ setInterval(myclock, 1000)
 
 // alarm feature
 
-var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
+let sound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/14/audio_bc24306a6a.mp3?filename=jump-scare_1-66858.mp3");
 sound.loop = true;
-function hoursMenu() {
-
-  var select = document.getElementById('alarmhrs');
-  var hrs = 12
+const hoursMenu = () => {
+  let select = document.getElementById('alarmhrs');
+  let hrs = 12
 
   for (i = 1; i <= hrs; i++) {
     select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
@@ -35,10 +34,10 @@ function hoursMenu() {
 }
 hoursMenu();
 
-function minMenu() {
+const minMenu =() =>{
 
-  var select = document.getElementById('alarmmins');
-  var min = 59;
+  let select = document.getElementById('alarmmins');
+  let min = 59;
 
   for (i = 0; i <= min; i++) {
     select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
@@ -46,10 +45,10 @@ function minMenu() {
 }
 minMenu();
 
-function secMenu() {
+const secMenu= () =>{
 
-  var select = document.getElementById('alarmsecs');
-  var sec = 59;
+  let select = document.getElementById('alarmsecs');
+  let sec = 59;
 
   for (i = 0; i <= sec; i++) {
     select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
@@ -58,23 +57,23 @@ function secMenu() {
 secMenu();
 
 
-function alarmSet() {
+const alarmSet = () =>{
 
-  var hr = document.getElementById('alarmhrs');
+  let hr = document.getElementById('alarmhrs');
 
-  var min = document.getElementById('alarmmins');
+  let min = document.getElementById('alarmmins');
 
-  var sec = document.getElementById('alarmsecs');
+  let sec = document.getElementById('alarmsecs');
 
-  var ap = document.getElementById('ampm');
+  let ap = document.getElementById('ampm');
 
 
-  var selectedHour = hr.options[hr.selectedIndex].value;
-  var selectedMin = min.options[min.selectedIndex].value;
-  var selectedSec = sec.options[sec.selectedIndex].value;
-  var selectedAP = ap.options[ap.selectedIndex].value;
+  let selectedHour = hr.options[hr.selectedIndex].value;
+  let selectedMin = min.options[min.selectedIndex].value;
+  let selectedSec = sec.options[sec.selectedIndex].value;
+  let selectedAP = ap.options[ap.selectedIndex].value;
 
-  var alarmTime = addZero(selectedHour) + ":" + addZero(selectedMin) + ":" + addZero(selectedSec) + selectedAP;
+  let alarmTime = addZero(selectedHour) + ":" + addZero(selectedMin) + ":" + addZero(selectedSec) + selectedAP;
   console.log('alarmTime:' + alarmTime);
   document.getElementById('alarmhrs').disabled = true;
   document.getElementById('alarmmins').disabled = true;
@@ -84,23 +83,23 @@ function alarmSet() {
 
   //when alarmtime is equal to currenttime then play a sound
   // declared previously
-var clock = document.getElementById('ghari');
+let clock = document.getElementById('ghari');
   /*function to calcutate the current time 
   then compare it to the alarmtime and play a sound when they are equal
   */
 
-  setInterval(function() {
+  setInterval(() =>{
 
-    var t = new Date();
+    let t = new Date();
 
-    var h = (12 - (t.getHours()));
-    // var hours = date.getHours();
+    let h = (12 - (t.getHours()));
+    // let hours = date.getHours();
 
-    var m = t.getMinutes();
+    let m = t.getMinutes();
 
-    var s = t.getSeconds();
+    let s = t.getSeconds();
 
-    var ampm = (t.getHours()) < 12 ? 'AM' : 'PM';
+    let ampm = (t.getHours()) < 12 ? 'AM' : 'PM';
 
 
     //convert military time to standard time
@@ -112,7 +111,7 @@ var clock = document.getElementById('ghari');
     } else {
       h = h;
     } 
-    var currentTime = clock.textContent = addZero(h) + ":" + addZero(m) + ":" + addZero(s) + "" + ampm;
+    let currentTime = clock.textContent = addZero(h) + ":" + addZero(m) + ":" + addZero(s) + "" + ampm;
 
 
     if (alarmTime == currentTime) {
@@ -125,7 +124,7 @@ var clock = document.getElementById('ghari');
 }
 
 
-function alarmClear() {
+const alarmClear= () =>{
 
   document.getElementById('alarmhrs').disabled = false;
   document.getElementById('alarmmins').disabled = false;
