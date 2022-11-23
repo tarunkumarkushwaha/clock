@@ -21,7 +21,7 @@ setInterval(myclock, 1000)
 
 // alarm feature
 
-let sound = new Audio("https://cdn.pixabay.com/download/audio/2022/03/14/audio_bc24306a6a.mp3?filename=jump-scare_1-66858.mp3");
+let sound = new Audio("https://cdn.pixabay.com/download/audio/2021/08/04/audio_c668156e64.mp3?filename=alarm-clock-short-6402.mp3");
 sound.loop = true;
 const hoursMenu = () => {
   let select = document.getElementById('alarmhrs');
