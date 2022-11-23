@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Kanit', sans-serif;
-  background-image: url(https://images.unsplash.com/photo-1668531501900-58e9ecf10fb5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-image: url(https://source.unsplash.com/featured/1600x900);
   background-blend-mode: overlay;
   display: flex;
   flex-direction: column;
@@ -10,18 +10,20 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-.paint {
+#ghari{
 background-color: #ffd6d6 ;
   font-size: 100px;
   opacity: 0.5;
   text-align: center;
+  height: 140px;
+  width: 600px;
 }
-button{
+button, .select{
   background-color: #ffd6d6 ;
   opacity: 0.5;
   text-decoration-color: #500707;
   font-size: 20px;
   font-family: 'Kanit', sans-serif;
-  height: 10vh ;
-  width: 20vw;
+  height: 50px ;
+  width: 300px;
 }

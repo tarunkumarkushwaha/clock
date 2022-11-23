@@ -7,13 +7,49 @@
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div id="ghari" class="paint"></div>
-  <button onclick="window.location.reload()" id="button" >Refresh</button>
+  <div id="ghari"></div>
+  <button onclick="window.location.reload()" id="button">Change wallpaper</button>
+
+  <div id='alarm-container'>
+    <label>
+      <div>
+        <select class='select' id='alarmhrs'></select>
+      </div>
+    </label>
+    <label>
+      <div>
+        <select class='select' id='alarmmins'></select>
+      </div>
+    </label>
+    <label>
+      <div>
+        <select class='select' id='alarmsecs'></select>
+      </div>
+    </label>
+    <label>
+      <div>
+        <select class='select' id="ampm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+    </label>
+  </div>
+  </div>
+  <div id='buttonHolder'>
+    <div>
+      <button id='setButton' onClick='alarmSet()'>Set Alarm</button>
+    </div>
+
+    <div>
+      <button id='clearButton' onClick='alarmClear()'>Clear Alarm</button>
+    </div>
+  </div>
   <script src="script.js"></script>
   <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
 </body>
