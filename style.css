@@ -3,7 +3,7 @@ html, body {
   width: 100%;
   font-family: 'Kanit', sans-serif;
   background-image: url(https://source.unsplash.com/featured/1600x900);
-  background-blend-mode: overlay;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -27,3 +27,9 @@ button, .select{
   height: 50px ;
   width: 300px;
 }
+button:hover, select:hover {
+        color: #f7f3f3;
+  background-color: #700000;
+        transition-duration: 1s;
+}
+

@@ -26,84 +26,49 @@ sound.loop = true;
 const hoursMenu = () => {
   let select = document.getElementById('alarmhrs');
   let hrs = 12
-
   for (i = 1; i <= hrs; i++) {
     select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
-
   }
 }
 hoursMenu();
-
 const minMenu =() =>{
-
   let select = document.getElementById('alarmmins');
   let min = 59;
-
   for (i = 0; i <= min; i++) {
     select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
   }
 }
 minMenu();
-
 const secMenu= () =>{
-
   let select = document.getElementById('alarmsecs');
   let sec = 59;
-
   for (i = 0; i <= sec; i++) {
     select.options[select.options.length] = new Option(i < 10 ? "0" + i : i, i);
   }
 }
 secMenu();
-
-
 const alarmSet = () =>{
-
   let hr = document.getElementById('alarmhrs');
-
   let min = document.getElementById('alarmmins');
-
   let sec = document.getElementById('alarmsecs');
-
   let ap = document.getElementById('ampm');
-
-
   let selectedHour = hr.options[hr.selectedIndex].value;
   let selectedMin = min.options[min.selectedIndex].value;
   let selectedSec = sec.options[sec.selectedIndex].value;
   let selectedAP = ap.options[ap.selectedIndex].value;
-
   let alarmTime = addZero(selectedHour) + ":" + addZero(selectedMin) + ":" + addZero(selectedSec) + selectedAP;
   console.log('alarmTime:' + alarmTime);
   document.getElementById('alarmhrs').disabled = true;
   document.getElementById('alarmmins').disabled = true;
   document.getElementById('alarmsecs').disabled = true;
   document.getElementById('ampm').disabled = true;
-
-
-  //when alarmtime is equal to currenttime then play a sound
-  // declared previously
 let clock = document.getElementById('ghari');
-  /*function to calcutate the current time 
-  then compare it to the alarmtime and play a sound when they are equal
-  */
-
   setInterval(() =>{
-
     let t = new Date();
-
     let h = (12 - (t.getHours()));
-    // let hours = date.getHours();
-
     let m = t.getMinutes();
-
     let s = t.getSeconds();
-
     let ampm = (t.getHours()) < 12 ? 'AM' : 'PM';
-
-
-    //convert military time to standard time
-
     if (h < 0) {
       h = h * -1;
     } else if (h == 00) {
@@ -112,20 +77,13 @@ let clock = document.getElementById('ghari');
       h = h;
     } 
     let currentTime = clock.textContent = addZero(h) + ":" + addZero(m) + ":" + addZero(s) + "" + ampm;
-
-
     if (alarmTime == currentTime) {
       sound.play();
     }
-
   }, 1000);
   console.log('currentTime:' + currentTime);
-
 }
-
-
 const alarmClear= () =>{
-
   document.getElementById('alarmhrs').disabled = false;
   document.getElementById('alarmmins').disabled = false;
   document.getElementById('alarmsecs').disabled = false;
