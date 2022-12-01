@@ -1,6 +1,10 @@
 let clock = document.getElementById('ghari');
+let day = document.getElementById('day');
 const myclock = () => {
   let t = new Date();
+  let d = t.getDate()
+  let mn = t.getMonth()
+  let y = t.getFullYear()
   let h = (12 - (t.getHours()));
   let m = t.getMinutes();
   let s = t.getSeconds();
@@ -13,6 +17,7 @@ const myclock = () => {
     h = h;
   }
   clock.innerHTML = addZero(h) + ":" + addZero(m) + ":" + addZero(s) + " " + ampm;
+  day.innerHTML= d + " / " + mn + " / " + y
 }
 const addZero = (time) => {
   return (time < 10) ? "0" + time : time;
@@ -20,7 +25,7 @@ const addZero = (time) => {
 setInterval(myclock, 1000)
 
 // alarm feature
-
+// it only works for current day
 let sound = new Audio("https://cdn.pixabay.com/download/audio/2021/08/04/audio_c668156e64.mp3?filename=alarm-clock-short-6402.mp3");
 sound.loop = true;
 const hoursMenu = () => {

@@ -10,6 +10,14 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+#day{
+  background-color: #ffd6d6 ;
+  font-size: 50px;
+  opacity: 0.5;
+  text-align: center;
+  height: 80px;
+  width: 400px;
+}
 #ghari{
 background-color: #ffd6d6 ;
   font-size: 100px;
@@ -32,4 +40,3 @@ button:hover, select:hover {
   background-color: #700000;
         transition-duration: 1s;
 }
-
