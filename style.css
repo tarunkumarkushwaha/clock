@@ -100,13 +100,18 @@ select:hover {
     align-items: unset;
   }
 
+  #ghari {
+    font-size: 88px;
+    margin: 0px;
+  }
+
   .dial1 {
     width: 95vw;
     margin: 10px;
   }
 
   #AMPM {
-    margin: 0 100px 0 100px;
+    margin: 0 100px 0 120px;
     font-size: 50px;
     height: 75px;
   }
@@ -118,7 +123,7 @@ select:hover {
   }
 
   .select {
-    width: 360px;
+    width: 345px;
   }
 
   .button {
